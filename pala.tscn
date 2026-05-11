@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://brdddeb4hnkfg"]
+
+[ext_resource type="Script" uid="uid://cxu16i43r8whp" path="res://pala.gd" id="1_jbgpj"]
+[ext_resource type="Texture2D" uid="uid://dk8tx7fhco73s" path="res://paddle.png" id="2_hdts2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab24s"]
+size = Vector2(18, 4)
+
+[node name="Pala" type="CharacterBody2D"]
+position = Vector2(3, 10)
+script = ExtResource("1_jbgpj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8.58307e-07, 0)
+scale = Vector2(0.45, 1)
+texture = ExtResource("2_hdts2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ab24s")

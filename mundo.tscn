@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://gw1fs0sa0l5k"]
+
+[ext_resource type="PackedScene" uid="uid://brdddeb4hnkfg" path="res://pala.tscn" id="1_6ba58"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgngo"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw4w5"]
+size = Vector2(20, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otwa2"]
+size = Vector2(1152, 20)
+
+[node name="Mundo" type="Node2D"]
+
+[node name="Pala" parent="." instance=ExtResource("1_6ba58")]
+position = Vector2(576, 645)
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="Izquierda" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(0, 324)
+shape = SubResource("RectangleShape2D_lgngo")
+
+[node name="Derecha" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1152, 324)
+shape = SubResource("RectangleShape2D_fw4w5")
+
+[node name="Techo" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(576, -10)
+shape = SubResource("RectangleShape2D_otwa2")
